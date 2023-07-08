@@ -1,0 +1,49 @@
+/* CSS for the form container */
+.form-container {
+  max-width: 500px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+}
+
+/* CSS for form labels */
+.form-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* CSS for form inputs and textarea */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* CSS for form submit button */
+.form-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* CSS for responsive layout */
+@media screen and (max-width: 600px) {
+  .form-container {
+    max-width: 100%; /* Make the form container full width */
+    padding: 10px;
+  }
+  
+  .form-container input[type="submit"] {
+    margin-top: 10px;
+  }
+}

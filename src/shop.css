@@ -1,0 +1,71 @@
+#featured>div.row.mx-auto.container>nav>ul>li.page-item.active>a {
+    background-color: black;
+}
+
+#featured>div.row.mx-auto.container>nav>ul>li:nth-child(n):hover>a {
+    background-color: coral;
+    color: #fff;
+
+}
+link{
+    text-decoration: none;
+}
+.pagination a {
+    color: #000;
+}
+
+.btnC-group button:hover,
+.btnC-group .btnC-clicked {
+    background-color: #fb774b;
+}
+
+.whatsapp-now {
+    background: #015f0a;
+    opacity: 1;
+    transition: 0.3s all;
+    border-radius: 30px;
+}
+
+
+
+#box {
+    width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
+}
+
+#box:hover {
+    box-shadow: 1px 6px 3px 0 rgb(185, 185, 185);
+}
+
+
+
+#details {
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+
+#box a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    margin: 2px 4px;
+}
+
+button:hover {
+    background-color: #3a3833;
+}
