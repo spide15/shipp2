@@ -23,7 +23,7 @@ const About = () => {
 
                         <div class="post col-lg-6 col-md-6 col-12 pb-5">
                             <div class="post-img">
-                                <img class="img-fluid w-100" src="./img/about/1.png" alt="image1" />
+                                <img class="img-fluid w-100" src="img/about/1.png" alt="image1" />
                             </div>
 
                         </div>
@@ -60,7 +60,7 @@ const About = () => {
                         </div>
                         <div class="post col-lg-6 col-md-6 col-12 pb-5">
                             <div class="post-img">
-                                <img class="img-fluid w-100" src="./img/about/2.png" alt="image" />
+                                <img class="img-fluid w-100" src="img/about/2.png" alt="image" />
                             </div>
 
                         </div>
