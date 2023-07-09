@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import './nav.css'
+import logo1 from './img/logo/AVANI Visiting Card Final.png'
 const Nav = () => {
   const location = useLocation()
     
@@ -11,7 +12,7 @@ const Nav = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div className="container">
 
-          <img className="logo-img" src='./img/logo/AVANI Visiting Card Final.png' alt="AvaniXerox" />
+          <img className="logo-img" src={logo1} alt="AvaniXerox" />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">

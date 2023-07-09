@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import about1 from './img/about/1.png'
+import about2 from './img/about/2.png'
 
 import './about.css'
 const About = () => {
@@ -23,7 +24,7 @@ const About = () => {
 
                         <div class="post col-lg-6 col-md-6 col-12 pb-5">
                             <div class="post-img">
-                                <img class="img-fluid w-100" src="./img/about/1.png" alt="image1" />
+                                <img class="img-fluid w-100" src={about1} alt="image1" />
                             </div>
 
                         </div>
@@ -60,7 +61,7 @@ const About = () => {
                         </div>
                         <div class="post col-lg-6 col-md-6 col-12 pb-5">
                             <div class="post-img">
-                                <img class="img-fluid w-100" src="./img/about/2.png" alt="image" />
+                                <img class="img-fluid w-100" src={about2} alt="image" />
                             </div>
 
                         </div>

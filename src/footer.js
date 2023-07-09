@@ -1,5 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import name1 from './img/logo/name.png';
+import offer1 from './img/offer/1.jpg';
+import offer2 from './img/offer/2.jpg';
+import offer3 from './img/offer/3.jpg';
+import offer4 from './img/offer/4.jpg';
+import offer5 from './img/offer/5.jpg';
+import offer6 from './img/offer/6.jpg';
+import payment from './img/payment.png'
 
 import './footer.css'
 const Footer = () => {
@@ -11,7 +19,7 @@ const Footer = () => {
             <footer className="mt-3 pt-3 py-5">
                 <div className="row container mx-auto mt-5">
                     <div className="footer-one col-lg-3 col-md-6 col-12">
-                        <img className="img-fluid w-60 h-30 m-2" src="img/logo/name.png" alt="" />
+                        <img className="img-fluid w-60 h-30 m-2" src={name1} alt="" />
                         <p className="pt-2">
                             AJXS is an experienced printing company that can fulfill a number of printing requirements, providing
                             exceptional design solutions for online and offline advertising content.
@@ -89,37 +97,37 @@ const Footer = () => {
                         <div className="row">
                             <img
                                 onClick={handleClick}className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/1.jpg"
+                                src={offer1}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
                                 onClick={handleClick}className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/2.jpg"
+                                src={offer2}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/3.jpg"
+                                src={offer3}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
                                onClick={handleClick}className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/4.jpg"
+                                src={offer4}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
                                onClick={handleClick}className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/5.jpg"
+                                src={offer5}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
                                onClick={handleClick}className="img-fluid w-25 h-100 m-2"
-                                src="./img/offer/6.jpg"
+                                src={offer6}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
@@ -130,7 +138,7 @@ const Footer = () => {
                 <div className="copyright mt-5 mb-5">
                     <div className="row container mx-auto">
                         <div className="col-lg-2 col-md-6 col-12 mb-3">
-                            <img src="./img/payment.png" alt="payment" />
+                            <img src={payment} alt="payment" />
                         </div>
                         <div className="col-lg-5 col-md-6 col-12  mb-2">
                             <p>AJXS eCommerce©2023. All Rights Reserved</p>
