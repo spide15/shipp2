@@ -9,7 +9,7 @@ const Rout = ({product, setProduct, detail, view, close, setClose, addtocart}) =
   return (
     <>
     <Routes>
-        <Route path='/' element={<Home detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>}/>
+        <Route exact path='/' element={<Home detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>}/>
         {/* <Route path='/product' element={<Product product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>} /> */}
         <Route path='/product' element={<ProductList product={product} setProduct={setProduct} />} />
         <Route path='/about' element={<About />} />
