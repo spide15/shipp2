@@ -29,7 +29,7 @@ const App = () => {
   console.log(cart)
   return (
     <>
-      <div className="App">
+      {/* <div className="App">
         <header>
           <Nav searchbtn={searchbtn} />
         </header>
@@ -39,12 +39,12 @@ const App = () => {
         <footer>
           <Footer />
         </footer>
-      </div>
-      {/* <BrowserRouter>
-    <Nav searchbtn={searchbtn}/>
-    <Rout product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} cart={cart} setCart={setCart}/>
-    <Footer />
-    </BrowserRouter> */}
+      </div> */}
+      <BrowserRouter>
+        <Nav searchbtn={searchbtn} />
+        <Rout />
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }
