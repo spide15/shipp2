@@ -1,21 +1,24 @@
 import React from 'react'
-import { Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import Layout from "./layout";
 import Home from './home'
 import Contact from './contact'
 import About from './about'
 import ProductDetails from './ProductDetails';
 import ProductList from './shop'
-const Rout = ({product, setProduct, detail, view, close, setClose, addtocart}) => {
+const Rout = ({ product, setProduct }) => {
   return (
     <>
-    <Routes>
-        <Route exact path='/' element={<Home detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>}/>
-        {/* <Route path='/product' element={<Product product={product} setProduct={setProduct} detail={detail} view={view} close={close} setClose={setClose} addtocart={addtocart}/>} /> */}
-        <Route path='/product' element={<ProductList product={product} setProduct={setProduct} />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path="/product/:id" element={<ProductDetails/>} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='/product' element={<ProductList product={product} setProduct={setProduct} />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Route>
+      </Routes>
+
     </>
   )
 }
