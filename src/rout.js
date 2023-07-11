@@ -1,6 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Layout from "./layout";
+import {  Routes, Route, Navigate } from 'react-router-dom'
 import Home from './home'
 import Contact from './contact'
 import About from './about'
@@ -9,15 +8,15 @@ import ProductList from './shop'
 const Rout = ({ product, setProduct }) => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<ProductList product={product} setProduct={setProduct} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Route>
-      </Routes>
+     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/product" element={<ProductList product={product} setProduct={setProduct} />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/product/:id" element={<ProductDetails />} />
+      {/* Redirect "/shipp2" to another route */}
+      <Route path="/shipp2" element={<Navigate to="/" />} />
+    </Routes>
 
     </>
   )
