@@ -1,10 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import Nav from './nav'
 import Rout from './rout';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './footer';
 import Productdetail from './productdetail';
+import { Vortex } from 'react-loader-spinner'
+import './App.css'
 const App = () => {
+  
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },8000)
+  },[])
+
   // add to cart
   const [cart, setCart] = useState([])
   //product Detail
@@ -29,22 +40,31 @@ const App = () => {
   console.log(cart)
   return (
     <>
-      {/* <div className="App">
-        <header>
-          <Nav searchbtn={searchbtn} />
-        </header>
-        <main>
-          <Rout />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div> */}
-      <BrowserRouter>
-        <Nav searchbtn={searchbtn} />
-        <Rout />
-        <Footer />
-      </BrowserRouter>
+
+        <BrowserRouter>
+            <div className="content">
+                {loading ? (
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100vh' }}>
+                        <Vortex
+                        visible={true}
+                        height="80"
+                        width="80"
+                        ariaLabel="vortex-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="vortex-wrapper"
+                        colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
+                        />
+                    </div>
+                ) : (
+                    <>
+                        <Nav searchbtn={searchbtn} />
+                        <Rout />
+                        <Footer />
+                    </>
+                )}
+            </div>
+        </BrowserRouter>
+      
     </>
   )
 }
