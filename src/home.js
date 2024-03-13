@@ -5,13 +5,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import NumberCounter from 'number-counter'
 import './home.css'
 import { Link } from 'react-router-dom';
-import slider1 from './img/slider/1.png';
-import slider2 from './img/slider/2.png';
-import slider3 from './img/slider/3.png';
-import slider4 from './img/slider/4.png';
-import slider5 from './img/slider/5.png';
-import slider6 from './img/slider/6.png';
-import slider7 from './img/slider/7.png';
+import slider1 from './img/slider/1.jpg';
+import slider2 from './img/slider/2.jpg';
+import slider3 from './img/slider/3.jpg';
+import slider4 from './img/slider/4.jpg';
+import slider5 from './img/slider/5.jpg';
+import slider6 from './img/slider/6.jpg';
+import slider7 from './img/slider/7.jpg';
 import banner1 from './img/blog/1 FLEX.png'
 import section1 from './img/new/01.png'
 import section2 from './img/new/02.png'
