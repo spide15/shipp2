@@ -14,7 +14,7 @@ const App = () => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 2500)
   }, [])
 
   // add to cart
