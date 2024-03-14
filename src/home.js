@@ -12,7 +12,7 @@ import slider4 from './img/slider/4.jpg';
 import slider5 from './img/slider/5.jpg';
 import slider6 from './img/slider/6.jpg';
 import slider7 from './img/slider/7.jpg';
-import banner1 from './img/blog/1 FLEX.png'
+import banner1 from './img/blog/1 FLEX.jpg'
 import section1 from './img/new/01.png'
 import section2 from './img/new/02.png'
 import section3 from './img/new/03.png'
