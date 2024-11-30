@@ -1,6 +1,7 @@
 import React from 'react'
 import about1 from './img/about/1.png'
 import about2 from './img/about/2.png'
+import about3  from './img/about/About1.jpeg'
 
 import './about.css'
 const About = () => {
@@ -8,6 +9,10 @@ const About = () => {
         <>
             <div class="containerr pt-5 mt-5 container">
                 <h1 class="pt-5 mt-5" >About Us</h1>
+
+                <div className="shop-image-container text-center mb-5">
+                    <img className="img-fluid w-75" src={about3} alt="Shop" />
+                </div>
 
                 <hr class="mx-auto" />
                 <p >Welcome to AJXS, your one-stop destination for all your printing needs. We are dedicated to providing
