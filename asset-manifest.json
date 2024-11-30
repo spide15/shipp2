@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa290a25.css",
-    "main.js": "/static/js/main.17b78eb2.js",
+    "main.css": "/static/css/main.b0776571.css",
+    "main.js": "/static/js/main.09acb735.js",
     "static/js/787.c70ecb7b.chunk.js": "/static/js/787.c70ecb7b.chunk.js",
     "static/media/3 FLEX.png": "/static/media/3 FLEX.0c900e1e18d7e941cbe7.png",
     "static/media/2 FLEX.png": "/static/media/2 FLEX.ed566daac791c2e64612.png",
@@ -16,11 +16,11 @@
     "static/media/1.jpg": "/static/media/1.63387d106dfb0f8a6d4b.jpg",
     "static/media/13.jpg": "/static/media/13.5c2358f26e67b2e418e6.jpg",
     "static/media/02.png": "/static/media/02.c717b7f4c87d31887f0e.png",
+    "static/media/logo2icon.png": "/static/media/logo2icon.023fc340907aa3dd5c6e.png",
     "static/media/14.jpg": "/static/media/14.e8531605699bcd059b7c.jpg",
     "static/media/3.jfif": "/static/media/3.fdcfbe420800f1a54fbd.jfif",
     "static/media/2.jfif": "/static/media/2.a28904503730d8d990bb.jfif",
     "static/media/4.jfif": "/static/media/4.b93979ad0fca85052ac7.jfif",
-    "static/media/AVANI Visiting Card Final.png": "/static/media/AVANI Visiting Card Final.b4e1249bf8c7dc82c22d.png",
     "static/media/11.jpg": "/static/media/11.8d621af725cf8976c8ad.jpg",
     "static/media/1.jfif": "/static/media/1.000d7307ee6e1aea519c.jfif",
     "static/media/12.jpg": "/static/media/12.36903e9c04cef1e98451.jpg",
@@ -32,6 +32,7 @@
     "static/media/01.png": "/static/media/01.91b23d03c8a0d43af48b.png",
     "static/media/01.jpg": "/static/media/01.4a198b96769ee6bb714a.jpg",
     "static/media/15.jpg": "/static/media/15.249d3ad1f6f7ff3fbafe.jpg",
+    "static/media/qr-code.png": "/static/media/qr-code.80409dcd2edc8ed45579.png",
     "static/media/5.jfif": "/static/media/5.26238bea4bd50a469616.jfif",
     "static/media/name.png": "/static/media/name.c190836f7005ca722add.png",
     "static/media/3.png": "/static/media/3.f96b65d013a8aacc1b92.png",
@@ -40,12 +41,12 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.aa290a25.css.map": "/static/css/main.aa290a25.css.map",
-    "main.17b78eb2.js.map": "/static/js/main.17b78eb2.js.map",
+    "main.b0776571.css.map": "/static/css/main.b0776571.css.map",
+    "main.09acb735.js.map": "/static/js/main.09acb735.js.map",
     "787.c70ecb7b.chunk.js.map": "/static/js/787.c70ecb7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa290a25.css",
-    "static/js/main.17b78eb2.js"
+    "static/css/main.b0776571.css",
+    "static/js/main.09acb735.js"
   ]
 }
