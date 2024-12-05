@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import  { useEffect } from 'react';
 import './ProductDetails.css'
 import { useParams } from 'react-router-dom';
 import mugPrintingPreview from './img/product/mugPrinting/1.jpg'; // Replace with the actual path to the preview image
@@ -1049,35 +1050,52 @@ function ProductDetails() {
 
   const product = ShopProduct.find((p) => parseInt(p.id, 10) === productId);
 
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []);
  
   const [selectedPhoto, setSelectedPhoto] = useState(product.preview);
   const handlePhotoClick = (photo) => {
     setSelectedPhoto(photo);
   };
   return (
-    <div>
+    <main className="product-page">
       <div className="row" id="containerProduct">
         <div id="containerD">
+          {/* Image Section */}
           <div className="container" id="imageSection">
-            <img id="imgDetails" src={selectedPhoto} />
+            <img id="imgDetails" src={selectedPhoto} alt="Product" />
           </div>
+
+          {/* Product Details */}
           <div id="productDetails">
             <h2>{product.name}</h2>
+
+            {/* Photo Previews */}
             <div id="productPreview">
               {product.photos.map((photo, index) => (
-                <img src={photo} alt={`Additional Photo ${index + 1}`} key={index} id="previewImg" onClick={() => handlePhotoClick(photo)} />
+                <img
+                  src={photo}
+                  alt={`Additional Photo ${index + 1}`}
+                  key={index}
+                  id="previewImg"
+                  onClick={() => handlePhotoClick(photo)}
+                />
               ))}
             </div>
+
             <h4>Discount offer on Bulk Quantity</h4>
+
+            {/* Description */}
             <div id="details">
               <h3>Description</h3>
-              <p>
-                {product.description} </p>
+              <p>{product.description}</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

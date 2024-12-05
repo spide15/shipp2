@@ -75,6 +75,7 @@
 }
 
 .cta-button.call-now:hover {
+  color: aliceblue;
   background-color: #28a745;
   transform: scale(1.05);
 }
@@ -84,7 +85,7 @@
 }
 
 .cta-button.email-now:hover {
-  background-color: #0056b3;
+  color: aliceblue;
   transform: scale(1.05);
 }
 

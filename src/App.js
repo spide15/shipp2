@@ -4,25 +4,26 @@ import Rout from './rout';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './footer';
 import Productdetail from './productdetail';
-import { Vortex } from 'react-loader-spinner';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './App.css';
-import logo1 from './img/logo/logo2icon.png'; // Add your logo image
+import logo1 from './img/logo/logo2icon.png'; // Logo image
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Show loading screen for 2.5 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 2500); // Set the loading screen duration
+    }, 2500);
   }, []);
 
   // Add to cart
   const [cart, setCart] = useState([]);
+
   // Product detail
   const [close, setClose] = useState(false);
   const [detail, setDetail] = useState([]);
+
   // Filter product
   const [product, setProduct] = useState(Productdetail);
 
@@ -39,21 +40,27 @@ const App = () => {
     setClose(true);
   };
 
-  console.log(cart);
-
   return (
     <BrowserRouter>
-      <div className="content">
+      <div className="app-container">
         {loading ? (
           <div className="loading-overlay">
             <img src={logo1} alt="Logo" className="logo-animation" />
           </div>
         ) : (
           <>
+            {/* Navigation bar */}
             <Nav searchbtn={searchbtn} />
-            <Rout />
+
+            {/* Main content */}
+            <main className="main-content">
+              <Rout product={product} setProduct={setProduct} />
+            </main>
+
+            {/* Footer */}
             <Footer />
-            {/* WhatsApp icon */}
+
+            {/* WhatsApp floating button */}
             <a
               href="https://wa.me/+7738405495"
               className="whatsapp_float"

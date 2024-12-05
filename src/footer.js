@@ -141,7 +141,7 @@ const Footer = () => {
                             <img src={payment} alt="payment" />
                         </div>
                         <div className="col-lg-5 col-md-6 col-12  mb-2">
-                            <p>AJXS eCommerce©2023. All Rights Reserved</p>
+                            <p>AJXS eCommerce©2025. All Rights Reserved</p>
                         </div>
                         <div className="col-lg-4 col-md-6 col-12">
                             <Link to="tel:9320999385">

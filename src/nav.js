@@ -69,7 +69,7 @@ const Nav = () => {
                         : 'inactive nav-link'
                     }
                   >
-                    Shop
+                    Service
                   </Link>
                 </li>
                 <li className="nav-item">
