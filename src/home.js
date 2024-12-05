@@ -388,12 +388,12 @@ const Home = () => {
       <section className="pt-5 my-5">
         <div className="container pt-5 mt-5">
           <Slider
-            dots={true}
+            dots={false}
             infinite={true}
             slidesToShow={1}
             slidesToScroll={1}
             autoplay={true}
-            autoplaySpeed={2000}
+            autoplaySpeed={1000}
           >
             <div className="slidingImage">
               <img src={slider1} alt="image1" />
