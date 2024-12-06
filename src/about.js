@@ -1,10 +1,15 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import about1 from './img/about/1.png'
 import about2 from './img/about/2.png'
 import about3  from './img/about/About1.jpeg'
 
 import './about.css'
 const About = () => {
+
+    useEffect(() => {
+        // Scroll to top when the page loads
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
             <div class="containerr pt-5 mt-5 container">

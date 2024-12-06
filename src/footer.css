@@ -1,5 +1,5 @@
 footer {
-    background-color: #e2f3b2
+  background: linear-gradient(90deg, #dfee94, #dd5d5d); /* Gradient background */
   }
   
   footer h5 {
@@ -14,15 +14,15 @@ footer {
   
   footer li a {
     font-size: 0.8rem;
-    color: #999;
+    color: #ff0000;
   }
   
   footer li a:hover {
-    color: #d8d8d8;
+    color: #000000;
   }
   
   footer p {
-    color: #999;
+    color: #000000;
     font-size: 0.8;
   }
   

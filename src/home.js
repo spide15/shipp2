@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import NumberCounter from 'number-counter'
 import './home.css'
 import { Link } from 'react-router-dom';
+import AvaniXerox1 from './img/blog/AvaniXerox.jpg';
 import slider1 from './img/slider/1.jpg';
 import slider2 from './img/slider/2.jpg';
 import slider3 from './img/slider/3.jpg';
@@ -384,192 +385,169 @@ const Home = () => {
 
   return (
     <>
-      {/* slider main */}
-      <section className="pt-5 my-5">
-        <div className="container pt-5 mt-5">
-          <Slider
-            dots={false}
-            infinite={true}
-            slidesToShow={1}
-            slidesToScroll={1}
-            autoplay={true}
-            autoplaySpeed={1000}
-          >
-            <div className="slidingImage">
-              <img src={slider1} alt="image1" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider2} alt="image2" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider3} alt="image3" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider4} alt="image4" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider5} alt="image5" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider6} alt="image6" />
-            </div>
-            <div className="slidingImage">
-              <img src={slider7} alt="image7" />
-            </div>
-          </Slider>
-        </div>
-      </section>
 
-      {/* Banner 1 */}
-      <div className="col-lg-12 col-md-12 col-12 mt-5">
-        <div className="post-img">
-          <img className="img-fluid w-100" src={banner1} alt="banner1" />
+      <div className="home-background">
+        {/* Moving printing paper effect */}
+        <div className="printing-paper">Deep</div>
+        <div className="home-container">
+          <div className="image-wrapper">
+            <img src={AvaniXerox1} alt="Welcome to Our Shop" className="responsive-image" />
+          </div>
         </div>
-      </div>
 
-      {/* sections */}
-      <div className='product_type'>
-        <div className='container'>
-          <div className='box'>
-            <div className='img_box'>
-              <img src={section1} alt='Printing' />
-            </div>
-            <div className='detail'>
-              <div><p><NumberCounter end={25} start={1} delay='8' preFix="+" />Products</p></div>
-            </div>
+
+        {/* Banner 1 */}
+        <div className="home-container">
+          <div className="image-wrapper">
+            <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
           </div>
-          <div className='box'>
-            <div className='img_box'>
-              <img src={section2} alt='Gift' />
+        </div>
+
+
+        {/* sections */}
+        <div className='product_type'>
+          <div className='container'>
+            <div className='box'>
+              <div className='img_box'>
+                <img src={section1} alt='Printing' />
+              </div>
+              <div className='detail'>
+                <div><p><NumberCounter end={25} start={1} delay='8' preFix="+" />Products</p></div>
+              </div>
             </div>
-            <div className='detail'>
-              <div><p><NumberCounter end={30} start={1} delay='9' preFix="+" />Products</p></div>
+            <div className='box'>
+              <div className='img_box'>
+                <img src={section2} alt='Gift' />
+              </div>
+              <div className='detail'>
+                <div><p><NumberCounter end={30} start={1} delay='9' preFix="+" />Products</p></div>
+              </div>
             </div>
-          </div>
-          <div className='box'>
-            <div className='img_box'>
-              <img src={section3} alt='Xerox Service' />
-            </div>
-            <div className='detail'>
-              <div><p><NumberCounter end={17} start={1} delay='10' preFix="+" />Products</p></div>
+            <div className='box'>
+              <div className='img_box'>
+                <img src={section3} alt='Xerox Service' />
+              </div>
+              <div className='detail'>
+                <div><p><NumberCounter end={17} start={1} delay='10' preFix="+" />Products</p></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* home page product */}
-      <section id="print" >
-        <div className="container text-center">
-          <h3>Premium Product's</h3>
-          <hr className="mx-auto" />
-        </div>
-        <div className="row mx-auto container">
-          {Homeproduct.map((product) => (
-            <ProductDisplay product={product} key={product.id} />
-          ))}
-        </div>
-      </section>
+        {/* home page product */}
+        <section id="print" >
+          <div className="container text-center">
+            <h3>Premium Product's</h3>
+            <hr className="mx-auto" />
+          </div>
+          <div className="row mx-auto container">
+            {Homeproduct.map((product) => (
+              <ProductDisplay product={product} key={product.id} />
+            ))}
+          </div>
+        </section>
 
-      {/* offer */}
+        {/* offer */}
 
-      <section >
-        <div className="container pt-5 mt-5">
-          <h3 className="text-center mt-3"> Offers</h3>
-          <hr className="mx-auto" />
-          <div className="post-img" id="banner-slider"></div>
-          <Slider
-            dots={false}
-            infinite={true}
-            slidesToShow={1}
-            slidesToScroll={1}
-            autoplay={true}
-            autoplaySpeed={3000}
-          >
-            <div className="img-fluid w-100">
-              <img src={flex1} alt="image1" />
-            </div>
-            <div className="img-fluid w-100">
-              <img src={flex2} alt="image2" />
-            </div>
-            <div className="img-fluid w-100">
-              <img src={flex3} alt="image3" />
-            </div>
-          </Slider>
-        </div >
-      </section >
-
-      {/* client */}
-      <section className="container">
-        <div className="text-center mt-3 ">
-          <h3> Clients</h3>
-          <hr className="mx-auto" />
-          <div className="container my-2" id="brand">
+        <section >
+          <div className="container pt-5 mt-5">
+            <h3 className="text-center mt-3"> Offers</h3>
+            <hr className="mx-auto" />
+            <div className="post-img" id="banner-slider"></div>
             <Slider
               dots={false}
               infinite={true}
               slidesToShow={1}
               slidesToScroll={1}
               autoplay={true}
-              autoplaySpeed={2000}
+              autoplaySpeed={3000}
             >
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client1} alt="client" />
+              <div className="img-fluid w-100">
+                <img src={flex1} alt="image1" />
               </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client2} alt="client" />
+              <div className="img-fluid w-100">
+                <img src={flex2} alt="image2" />
               </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client3} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client4} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client5} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client6} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client7} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client8} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client9} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client10} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client11} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client12} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client13} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client14} alt="client" />
-              </div>
-              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <img className="img-fluid" src={client15} alt="client" />
+              <div className="img-fluid w-100">
+                <img src={flex3} alt="image3" />
               </div>
             </Slider>
-            <hr className="mx-auto" />
-          </div>
-        </div>
-      </section>
+          </div >
+        </section >
 
-      {/* map */}
-      <div className=" col-lg-12 col-md-12 col-12 ">
-        <div className="post-img">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.6595559054854!2d72.8558526092061!3d19.253663446299033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e482e6c5fb%3A0xf05f1fcfd1f9d533!2sAvani%20Jumbo%20Xerox!5e0!3m2!1sen!2sin!4v1682943226876!5m2!1sen!2sin"
-            width="100%" height="400" style={{ border: 0 }} allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        {/* client */}
+        <section className="container">
+          <div className="text-center mt-3 ">
+            <h3> Clients</h3>
+            <hr className="mx-auto" />
+            <div className="container my-2" id="brand">
+              <Slider
+                dots={false}
+                infinite={true}
+                slidesToShow={1}
+                slidesToScroll={1}
+                autoplay={true}
+                autoplaySpeed={1500}
+              >
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client1} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client2} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client3} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client4} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client5} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client6} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client7} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client8} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client9} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client10} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client11} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client12} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client13} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client14} alt="client" />
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <img className="img-fluid" src={client15} alt="client" />
+                </div>
+              </Slider>
+              <hr className="mx-auto" />
+            </div>
+          </div>
+        </section>
+
+        {/* map */}
+        <div className=" col-lg-12 col-md-12 col-12 ">
+          <div className="post-img">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.6595559054854!2d72.8558526092061!3d19.253663446299033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0e482e6c5fb%3A0xf05f1fcfd1f9d533!2sAvani%20Jumbo%20Xerox!5e0!3m2!1sen!2sin!4v1682943226876!5m2!1sen!2sin"
+              width="100%" height="400" style={{ border: 0 }} allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </>

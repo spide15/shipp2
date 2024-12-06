@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef,useEffect } from 'react'
 import './contact.css'
 import emailjs from 'emailjs-com';
 
@@ -17,6 +17,10 @@ const Contact = () => {
     };
 
 
+    useEffect(() => {
+        // Scroll to top when the page loads
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <>

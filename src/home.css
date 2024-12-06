@@ -1,3 +1,38 @@
+/* Full-screen background with a gradient and central content */
+.home-background {
+ 
+  
+ 
+}
+
+
+/* new image */
+.home-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 80px; /* Adjust according to your navbar height */
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  object-fit: cover; /* Ensures the image covers the space beautifully */
+}
+
+/* Media queries for further adjustments on smaller screens */
+@media (max-width: 768px) {
+  .responsive-image {
+    object-fit: contain; /* Optional: Adjust for smaller devices */
+  }
+}
+
+
 /* sliderr main */
 .container {
   max-width: 100%;
@@ -92,7 +127,7 @@
 }
 
 .product_type .container .box .detail p {
-  color: #9a9a9a;
+  color: #000000;
 }
 
 /* product */
