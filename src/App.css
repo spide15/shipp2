@@ -1,5 +1,4 @@
 /* Overlay during loading */
-
 .loading-overlay {
     position: fixed; /* Ensure it covers the entire viewport */
     top: 0;
@@ -8,10 +7,34 @@
     height: 100vh;
     background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Attractive gradient background */
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
     z-index: 1000;
     overflow: hidden; /* Prevent scroll during loading */
+}
+
+/* Tagline below the logo */
+.tagline {
+    font-size: 1.8rem; /* Default size for medium devices */
+    margin-top: 1rem;
+    color: #3e4e55;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Responsive tagline adjustments */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 1.4rem; /* Adjust size for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .tagline {
+        font-size: 2rem; /* Adjust size for larger screens */
+    }
 }
 
 /* Logo animation */
@@ -95,11 +118,23 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  /* Main content grows to fill space between header and footer */
-  .main-content {
-    background:    linear-gradient(90deg, #f4f4f4, #e5f4b5); /* Gradient background */;
+}
+
+/* Main content grows to fill space between header and footer */
+.main-content {
+    background: linear-gradient(90deg, #f4f4f4, #e5f4b5); /* Gradient background */;
     flex: 1; /* This makes the main content fill available space */
     padding: 20px; /* Optional padding */
-  }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+

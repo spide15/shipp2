@@ -1,7 +1,7 @@
 /* Full-screen background with a gradient and central content */
 .home-background {
  
-  
+ 
  
 }
 
@@ -172,4 +172,60 @@ button {
 
 button:hover {
   background-color: #3a3833;
+}
+/* Styling for the scrolling line inside home-background */
+.scrolling-line {
+  background-color: #ffcc00; /* Bright background for visibility */
+  color: #000; /* Dark text for contrast */
+  font-size: 1rem; /* Default font size */
+  text-align: center;
+  padding: 10px 0; /* Padding for spacing */
+  margin-bottom: 20px; /* Space below the scrolling line */
+  overflow: hidden;
+  white-space: nowrap; /* Prevent wrapping */
+  width: 100%;
+  position: absolute;
+ 
+  left: 0;
+  z-index: 10; /* Ensure it's above the home content */
+}
+
+/* Scrolling animation for text */
+.scrolling-line span {
+  display: inline-block;
+  animation: scrollText 10s linear infinite;
+  white-space: nowrap;
+}
+
+/* Define the scrolling effect */
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scrolling-line a {
+  color: #007bff; /* Highlight link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.scrolling-line a:hover {
+  text-decoration: underline; /* Underline link on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrolling-line {
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .scrolling-line {
+    font-size: 0.75rem; /* Further reduce font size for mobile */
+  }
 }

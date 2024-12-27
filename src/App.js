@@ -14,7 +14,7 @@ const App = () => {
     // Show loading screen for 2.5 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3000);
   }, []);
 
   // Add to cart
@@ -46,12 +46,14 @@ const App = () => {
         {loading ? (
           <div className="loading-overlay">
             <img src={logo1} alt="Logo" className="logo-animation" />
+            <p className="tagline">Where Quality Meets Affordability</p>
           </div>
         ) : (
           <>
             {/* Navigation bar */}
             <Nav searchbtn={searchbtn} />
 
+            
             {/* Main content */}
             <main className="main-content">
               <Rout product={product} setProduct={setProduct} />
