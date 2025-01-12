@@ -388,26 +388,28 @@ const Home = () => {
 
       <div className="home-background">
       <div className="scrolling-line">
-        <span>
-          We take orders on WhatsApp | Bulk orders available | Call us at{' '}
-          <a href="tel:+917738405495">+91-7738405495</a>
-        </span>
-      </div>
+            <span>
+              We take orders on WhatsApp | Bulk orders available | Call us at{' '}
+              <a href="tel:+917738405495">+91-7738405495</a>
+            </span>
+          </div>
         {/* Moving printing paper effect */}
         {/* <div className="printing-paper">Deep</div> */}
 
-        <div className="home-container">
+        {/* <div className="home-container">
           <div className="image-wrapper">
             <img src={AvaniXerox1} alt="Welcome to Our Shop" className="responsive-image" />
           </div>
-        </div>
+        </div> */}
 
 
         {/* Banner 1 */}
         <div className="home-container">
+       
           <div className="image-wrapper">
             <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
           </div>
+          
         </div>
 
 
