@@ -131,6 +131,37 @@ import spiral2 from './img/product/spiral/2.jfif';
 import spiral3 from './img/product/spiral/3.jfif';
 import spiral4 from './img/product/spiral/4.jfif';
 
+
+import offer11 from "./img/OFFERNEW/11.jpeg";
+import offer12 from "./img/OFFERNEW/12.jpeg";
+import offer13 from "./img/OFFERNEW/13.jpeg";
+import offer14 from "./img/OFFERNEW/14.jpeg";
+import offer15 from "./img/OFFERNEW/15.jpeg";
+import offer16 from "./img/OFFERNEW/16.jpeg";
+import offer17 from "./img/OFFERNEW/17.jpeg";
+import offer18 from "./img/OFFERNEW/18.jpeg";
+import offer19 from "./img/OFFERNEW/19.jpeg";
+import offer20 from "./img/OFFERNEW/20.jpeg";
+import offer21 from "./img/OFFERNEW/21.jpeg";
+import offer22 from "./img/OFFERNEW/22.jpeg";
+import offer23 from "./img/OFFERNEW/23.jpeg";
+import offer24 from "./img/OFFERNEW/24.jpeg";
+import offer25 from "./img/OFFERNEW/25.jpeg";
+import offer26 from "./img/OFFERNEW/26.jpeg";
+import offer27 from "./img/OFFERNEW/27.jpeg";
+import offer28 from "./img/OFFERNEW/28.jpeg";
+import offer29 from "./img/OFFERNEW/29.jpeg";
+import offer30 from "./img/OFFERNEW/30.jpeg";
+import offer31 from "./img/OFFERNEW/31.jpeg";
+import offer32 from "./img/OFFERNEW/32.jpeg";
+import offer33 from "./img/OFFERNEW/33.jpeg";
+import offer34 from "./img/OFFERNEW/34.jpeg";
+import offer35 from "./img/OFFERNEW/35.jpeg";
+import offer36 from "./img/OFFERNEW/36.jpeg";
+import offer37 from "./img/OFFERNEW/37.jpeg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function ProductDisplay({ product }) {
 
   return (
@@ -147,6 +178,36 @@ function ProductDisplay({ product }) {
 }
 
 const Home = () => {
+  const offerImages = [
+    offer11, offer12, offer13, offer14, offer15, offer16, offer17,
+    offer18, offer19, offer20, offer21, offer22, offer23, offer24,
+    offer25, offer26, offer27, offer28, offer29, offer30, offer31,
+    offer32, offer33, offer34, offer35, offer36, offer37
+  ];
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3, // Default for large screens
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 750,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Medium devices
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // Small devices
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   const Homeproduct =
     [
       {
@@ -387,12 +448,12 @@ const Home = () => {
     <>
 
       <div className="home-background">
-      <div className="scrolling-line">
-            <span>
-              We take orders on WhatsApp | Bulk orders available | Call us at{' '}
-              <a href="tel:+917738405495">+91-7738405495</a>
-            </span>
-          </div>
+        <div className="scrolling-line">
+          <span>
+            We take orders on WhatsApp | Bulk orders available | Call us at{' '}
+            <a href="tel:+917738405495">+91-7738405495</a>
+          </span>
+        </div>
         {/* Moving printing paper effect */}
         {/* <div className="printing-paper">Deep</div> */}
 
@@ -405,14 +466,56 @@ const Home = () => {
 
         {/* Banner 1 */}
         <div className="home-container">
-       
-          <div className="image-wrapper">
+
+          {/* <div className="image-wrapper">
             <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
-          </div>
-          
+          </div> */}
+        </div>
+        {/* new offer */}
+        <div className="slider-container">
+          <Slider {...sliderSettings}>
+            {offerImages.map((src, index) => (
+              <div key={index} className="slider-item">
+                <img src={src} alt={`Offer ${index + 11}`} />
+              </div>
+            ))}
+          </Slider>
         </div>
 
 
+        {/* feature */}
+        <div className="container-fluid pt-5">
+          <div className="row px-xl-5 pb-3">
+            {/** Feature Item */}
+            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* sections */}
         <div className='product_type'>
           <div className='container'>
@@ -469,7 +572,8 @@ const Home = () => {
               slidesToShow={1}
               slidesToScroll={1}
               autoplay={true}
-              autoplaySpeed={3000}
+              autoplaySpeed={1500}
+              arrows={false}
             >
               <div className="img-fluid w-100">
                 <img src={flex1} alt="image1" />
@@ -496,7 +600,8 @@ const Home = () => {
                 slidesToShow={1}
                 slidesToScroll={1}
                 autoplay={true}
-                autoplaySpeed={1500}
+                autoplaySpeed={1000}
+                arrows={false}
               >
                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <img className="img-fluid" src={client1} alt="client" />

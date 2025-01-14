@@ -229,3 +229,69 @@ button:hover {
     font-size: 0.75rem; /* Further reduce font size for mobile */
   }
 }
+/* feature css */
+.container-fluid {
+  padding: 20px;
+}
+
+.feature-item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h1 {
+  margin-right: 15px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.feature-item h5 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-item h1 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+}
+
+
+/* new offer */
+.slider-container {
+  margin: 20px auto;
+  width: 90%; /* Adjust as needed */
+}
+
+.slider-item {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
