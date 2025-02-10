@@ -472,49 +472,51 @@ const Home = () => {
           </div> */}
         </div>
         {/* new offer */}
-        <div className="slider-container">
-          <Slider {...sliderSettings}>
-            {offerImages.map((src, index) => (
-              <div key={index} className="slider-item">
-                <img src={src} alt={`Offer ${index + 11}`} />
+        <div className="home-container">
+          <div className="slider-container">
+            <Slider {...sliderSettings}>
+              {offerImages.map((src, index) => (
+                <div key={index} className="slider-item">
+                  <img src={src} alt={`Offer ${index + 11}`} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+
+          {/* feature */}
+          <div className="container-fluid ">
+            <div className="row px-xl-3 pb-3">
+              {/** Feature Item */}
+              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div className="feature-item d-flex align-items-center mb-4">
+                  <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
+                  <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
+                </div>
               </div>
-            ))}
-          </Slider>
-        </div>
 
-
-        {/* feature */}
-        <div className="container-fluid pt-5">
-          <div className="row px-xl-5 pb-3">
-            {/** Feature Item */}
-            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
+              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div className="feature-item d-flex align-items-center mb-4">
+                  <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
+                  <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
+                </div>
               </div>
-            </div>
 
-            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
+              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div className="feature-item d-flex align-items-center mb-4">
+                  <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
+                  <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
+                </div>
               </div>
-            </div>
 
-            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
+              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div className="feature-item d-flex align-items-center mb-4">
+                  <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
+                  <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
         {/* sections */}
         <div className='product_type'>

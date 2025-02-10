@@ -12,11 +12,23 @@ body {
     flex-direction: column;
     padding-top: 80px;
     min-height: calc(100vh - 200px);
-    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    /* background: linear-gradient(135deg, #ffffff, #f0f0f0); */
     border-top: 2px solid #ddd;
 }
 
-/* Product Section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Product Section with Animation */
 #containerD {
     width: 90%;
     margin: auto;
@@ -28,7 +40,27 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+
+    /* Animation */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 0.8s ease-out forwards;
+
+    
 }
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Image Section */
 #imageSection {
@@ -38,16 +70,20 @@ body {
 
 #imageSection img {
     width: 100%;
-    max-width: 500px; /* Limit the maximum width */
+    max-width: 500px;
+    /* Limit the maximum width */
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 #imageSection img:hover {
-    transform: scale(1.1); /* Bigger zoom effect */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.1);
+    /* Bigger zoom effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
 }
 
 /* Product Details Section */
@@ -74,27 +110,35 @@ h4 {
 /* Product Preview Images */
 #productPreview {
     display: flex;
-    flex-wrap: wrap; /* Ensure thumbnails wrap on smaller screens */
-    gap: 15px; /* Increased spacing for larger thumbnails */
+    flex-wrap: wrap;
+    /* Ensure thumbnails wrap on smaller screens */
+    gap: 15px;
+    /* Increased spacing for larger thumbnails */
     margin-bottom: 20px;
     justify-content: center;
 }
 
-#productPreview > img {
-    width: 70px; /* Larger thumbnails */
-    height: 70px; /* Consistent size */
+#productPreview>img {
+    width: 70px;
+    /* Larger thumbnails */
+    height: 70px;
+    /* Consistent size */
     padding: 8px;
     border-radius: 12px;
     border: 3px solid transparent;
     cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for preview images */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for preview images */
 }
 
-#productPreview > img:hover {
-    transform: scale(1.2); /* Zoom on hover */
-    border-color: #007BFF; /* Highlight border */
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Stronger shadow */
+#productPreview>img:hover {
+    transform: scale(1.2);
+    /* Zoom on hover */
+    border-color: #007BFF;
+    /* Highlight border */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    /* Stronger shadow */
 }
 
 /* Description Section */
@@ -133,13 +177,15 @@ button:hover {
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
     #containerD {
-        grid-template-columns: 1fr; /* Stack sections vertically */
+        grid-template-columns: 1fr;
+        /* Stack sections vertically */
         width: 95%;
         padding: 40px 20px;
     }
 
     #imageSection img {
-        width: 80%; /* Reduce image width for smaller devices */
+        width: 80%;
+        /* Reduce image width for smaller devices */
         max-width: 400px;
         margin: 0 auto;
     }
@@ -160,8 +206,9 @@ button:hover {
         font-size: 14px;
     }
 
-    #productPreview > img {
-        width: 60px; /* Slightly smaller thumbnails */
+    #productPreview>img {
+        width: 60px;
+        /* Slightly smaller thumbnails */
         height: 60px;
     }
 }
