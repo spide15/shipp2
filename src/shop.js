@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import './shop.css'
 import { Link } from 'react-router-dom';
 import mugPrintingPreview from './img/product/mugPrinting/1.jpg'; // Replace with the actual path to the preview image
@@ -327,7 +327,7 @@ import passportCover5 from './img/product/passport/5.jpg';
 import passportCover6 from './img/product/passport/6.jpg';
 function ProductDisplay({ product }) {
     return (
-        <div className="product text-center col-lg-3 col-md-4 col-12" key={product.id}>
+        <div className="product text-center col-lg-3 col-md-4 col-6" key={product.id}>
             <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
                 <img src={product.preview} alt={product.name} className="img-fluid mb-3" />
                 <h5 className="p-name">{product.name}</h5>
@@ -1057,6 +1057,12 @@ const dummyData = [
     }
 ];
 const ProductList = () => {
+
+    useEffect(() => {
+        // Scroll to top when the page loads
+        window.scrollTo(0, 0);
+    }, []);
+
     const [searchText, setSearchText] = useState('');
     const [filter, _setFilter] = useState('All');
     const [products, setProducts] = useState(dummyData);

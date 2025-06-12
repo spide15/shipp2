@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useEffect}from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -165,7 +165,7 @@ import "slick-carousel/slick/slick-theme.css";
 function ProductDisplay({ product }) {
 
   return (
-    <div className="product text-center col-lg-3 col-md-4 col-12" key={product.id}>
+    <div className="product text-center col-lg-4 col-md-6 col-6" key={product.id}>
       <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
         <img src={product.preview} alt={product.name} className="img-fluid mb-3" />
         <h5 className="p-name">{product.name}</h5>
@@ -178,6 +178,10 @@ function ProductDisplay({ product }) {
 }
 
 const Home = () => {
+  useEffect(() => {
+        // Scroll to top when the page loads
+        window.scrollTo(0, 0);
+      }, []);
   const offerImages = [
     offer11, offer12, offer13, offer14, offer15, offer16, offer17,
     offer18, offer19, offer20, offer21, offer22, offer23, offer24,
@@ -454,6 +458,7 @@ const Home = () => {
             <a href="tel:+917738405495">+91-7738405495</a>
           </span>
         </div>
+
         {/* Moving printing paper effect */}
         {/* <div className="printing-paper">Deep</div> */}
 
@@ -463,64 +468,9 @@ const Home = () => {
           </div>
         </div> */}
 
-
-        {/* Banner 1 */}
-        <div className="home-container">
-
-          {/* <div className="image-wrapper">
-            <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
-          </div> */}
-        </div>
-        {/* new offer */}
-        <div className="home-container">
-          <div className="slider-container">
-            <Slider {...sliderSettings}>
-              {offerImages.map((src, index) => (
-                <div key={index} className="slider-item">
-                  <img src={src} alt={`Offer ${index + 11}`} />
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          {/* feature */}
-          <div className="container-fluid ">
-            <div className="row px-xl-3 pb-3">
-              {/** Feature Item */}
-              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div className="feature-item d-flex align-items-center mb-4">
-                  <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
-                  <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div className="feature-item d-flex align-items-center mb-4">
-                  <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
-                  <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div className="feature-item d-flex align-items-center mb-4">
-                  <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
-                  <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div className="feature-item d-flex align-items-center mb-4">
-                  <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
-                  <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
         {/* sections */}
-        <div className='product_type'>
-          <div className='container'>
+        <div className='product_type home-container container-fluid'>
+          <div className='container pt-3' >
             <div className='box'>
               <div className='img_box'>
                 <img src={section1} alt='Printing' />
@@ -547,6 +497,69 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      {/* Banner 1 */}
+      {/* <div className="home-container"> */}
+
+        {/* <div className="image-wrapper">
+            <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
+          </div> */}
+      {/* </div> */}
+
+      <div className="container-fluid ">
+          <div className="row px-xl-3">
+            {/** Feature Item */}
+            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+              <div className="feature-item d-flex align-items-center mb-4">
+                <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
+                <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      {/* new offer */}
+      <div className="home-container">
+        <div className="container text-center">
+          <h3>Trending Offer</h3>
+          <hr className="mx-auto" />
+        </div>
+        <div className="slider-container">
+          <Slider {...sliderSettings}>
+            {offerImages.map((src, index) => (
+              <div key={index} className="slider-item">
+                <img src={src} alt={`Offer ${index + 11}`} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* feature */}
+
+
 
         {/* home page product */}
         <section id="print" >

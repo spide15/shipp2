@@ -126,7 +126,7 @@ const Nav = () => {
             <span className="qr-modal-close" onClick={toggleQRModal}>
               &times;
             </span>
-            <h3>Scan the QR Code</h3>
+            <h3>Scan the QR Code for more details</h3>
             <img src={qrCode} alt="QR Code" className="qr-code-image" />
           </div>
         </div>

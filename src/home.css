@@ -134,7 +134,7 @@
 
 .product img {
   transition: 0.3s all;
-  height: 45vh;
+  height: auto;
 }
 
 .product:hover img {
