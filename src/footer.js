@@ -13,7 +13,7 @@ import './footer.css'
 const Footer = () => {
     const handleClick = () => {
         window.location.href = 'https://instagram.com/avanijumboxerox?igshid=MzNlNGNkZWQ4Mg==';
-      };
+    };
     return (
         <>
             <footer className="mt-3 pt-3 py-5">
@@ -63,8 +63,8 @@ const Footer = () => {
                             <p>
                                 <Link to='tel:9320999385'>
                                     9320999385</Link>
-                                    <br/>
-                                    <Link to='tel:7304700495'>
+                                <br />
+                                <Link to='tel:7304700495'>
                                     7304700495</Link>
                             </p>
                         </div>
@@ -96,37 +96,37 @@ const Footer = () => {
                         <h5 className="pb-2">Current Offers</h5>
                         <div className="row">
                             <img
-                                onClick={handleClick}className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer1}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
-                                onClick={handleClick}className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer2}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
-                               onClick={handleClick} className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer3}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
-                               onClick={handleClick}className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer4}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
-                               onClick={handleClick}className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer5}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
                             />
                             <img
-                               onClick={handleClick}className="img-fluid w-25 h-100 m-2"
+                                onClick={handleClick} className="img-fluid w-25 h-100 m-2"
                                 src={offer6}
                                 style={{ cursor: 'pointer' }}
                                 alt="offer"
@@ -155,6 +155,12 @@ const Footer = () => {
                             </Link>
                             <Link to="https://goo.gl/maps/vXF5fnxjRMY7RLdE6">
                                 <i className="far fa-map-marker-alt"></i>
+                            </Link>
+                            <Link to="https://www.instagram.com/avanijumboxerox/" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-instagram"></i>
+                            </Link>
+                            <Link to="https://youtube.com/@avaniprints?si=DjIexF8Q0X0lUvXE" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-youtube"></i>
                             </Link>
                         </div>
                     </div>
