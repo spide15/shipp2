@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d3757318.css",
-    "main.js": "/static/js/main.2b57a32a.js",
+    "main.css": "/static/css/main.9cecf2ef.css",
+    "main.js": "/static/js/main.c0edeab2.js",
     "static/js/787.c70ecb7b.chunk.js": "/static/js/787.c70ecb7b.chunk.js",
     "static/media/3 FLEX.png": "/static/media/3 FLEX.0c900e1e18d7e941cbe7.png",
     "static/media/2 FLEX.png": "/static/media/2 FLEX.ed566daac791c2e64612.png",
@@ -18,6 +18,7 @@
     "static/media/AvaniXerox.jpg": "/static/media/AvaniXerox.cf4fc28864cd02d44431.jpg",
     "static/media/About1.jpeg": "/static/media/About1.7719b5872e55b275c3d5.jpeg",
     "static/media/18.jpeg": "/static/media/18.153bf4e153ec7073fa64.jpeg",
+    "static/media/Red_logp.png": "/static/media/Red_logp.dd0a4392190b435e9994.png",
     "static/media/23.jpeg": "/static/media/23.04420cc98601f6434f29.jpeg",
     "static/media/02.png": "/static/media/02.c717b7f4c87d31887f0e.png",
     "static/media/28.jpeg": "/static/media/28.cfc35ec49095c0ed4384.jpeg",
@@ -70,12 +71,12 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.d3757318.css.map": "/static/css/main.d3757318.css.map",
-    "main.2b57a32a.js.map": "/static/js/main.2b57a32a.js.map",
+    "main.9cecf2ef.css.map": "/static/css/main.9cecf2ef.css.map",
+    "main.c0edeab2.js.map": "/static/js/main.c0edeab2.js.map",
     "787.c70ecb7b.chunk.js.map": "/static/js/787.c70ecb7b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3757318.css",
-    "static/js/main.2b57a32a.js"
+    "static/css/main.9cecf2ef.css",
+    "static/js/main.c0edeab2.js"
   ]
 }
