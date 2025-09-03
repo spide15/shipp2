@@ -1,19 +1,12 @@
-import React ,{useEffect}from 'react'
+import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import NumberCounter from 'number-counter'
-import './home.css'
+import NumberCounter from 'number-counter';
+import './home.css';
 import { Link } from 'react-router-dom';
-import AvaniXerox1 from './img/blog/AvaniXerox.jpg';
-import slider1 from './img/slider/1.jpg';
-import slider2 from './img/slider/2.jpg';
-import slider3 from './img/slider/3.jpg';
-import slider4 from './img/slider/4.jpg';
-import slider5 from './img/slider/5.jpg';
-import slider6 from './img/slider/6.jpg';
-import slider7 from './img/slider/7.jpg';
-import banner1 from './img/blog/1 FLEX.jpg'
+
+import banner1 from './img/blog/1 FLEX.jpg';
 import section1 from './img/new/01.png'
 import section2 from './img/new/02.png'
 import section3 from './img/new/03.png'
@@ -50,37 +43,35 @@ import stamp3 from './img/product/stamp/3.jfif';
 import stamp4 from './img/product/stamp/4.jfif';
 import stamp5 from './img/product/stamp/5.jfif';
 import stampPreview from './img/product/stamp/1.jpg';
-import mugPreview from './img/product/mugPrinting/1.jpg'; // Replace with the actual path to the preview image
+import mugPreview from './img/product/mugPrinting/1.jpg';
 import mug2 from './img/product/mugPrinting/2.jpg';
 import mug3 from './img/product/mugPrinting/3.jpg';
 import mug4 from './img/product/mugPrinting/4.jpg';
 import mug5 from './img/product/mugPrinting/5.jpg';
 import mug6 from './img/product/mugPrinting/6.jpg';
 import mug7 from './img/product/mugPrinting/7.jpg';
-import blackBookPreview from './img/product/blackBook/1.jfif'; // Replace with the actual path to the preview image
+import blackBookPreview from './img/product/blackBook/1.jfif';
 import blackBook1 from './img/product/blackBook/1.jfif';
 import blackBook2 from './img/product/blackBook/2.jfif';
 import blackBook3 from './img/product/blackBook/3.jfif';
 import blackBook4 from './img/product/blackBook/4.jfif';
-import billBookPreview from './img/product/billBook/1.jpg'; // Replace with the actual path to the preview image
+import billBookPreview from './img/product/billBook/1.jpg';
 import billBook1 from './img/product/billBook/1.jpg';
 import billBook2 from './img/product/billBook/2.jfif';
 import billBook3 from './img/product/billBook/3.png';
 import billBook4 from './img/product/billBook/4.jfif';
-
-import letterHeadPreview from './img/product/letterHead/1.jpg'; // Replace with the actual path to the preview image
+import letterHeadPreview from './img/product/letterHead/1.jpg';
 import letterHead1 from './img/product/letterHead/1.jpg';
 import letterHead2 from './img/product/letterHead/2.jpg';
 import letterHead3 from './img/product/letterHead/3.jpg';
 import letterHead4 from './img/product/letterHead/4.jpg';
-import flexPreview from './img/product/flex/1.jpg'; // Replace with the actual path to the preview image
+import flexPreview from './img/product/flex/1.jpg';
 import flex11 from './img/product/flex/1.jpg';
 import flex22 from './img/product/flex/2.jpg';
 import flex33 from './img/product/flex/3.jfif';
 import flex4 from './img/product/flex/4.jfif';
 import flex5 from './img/product/flex/5.jpg';
-
-import penPreview from './img/product/pen/4.jpg'; // Replace with the actual path to the preview image
+import penPreview from './img/product/pen/4.jpg';
 import pen2 from './img/product/pen/2.jpg';
 import pen3 from './img/product/pen/3.jpg';
 import pen4 from './img/product/pen/4.jpg';
@@ -89,13 +80,12 @@ import pen6 from './img/product/pen/6.jpg';
 import pen7 from './img/product/pen/7.jpg';
 import pen8 from './img/product/pen/8.jpg';
 import pen1 from './img/product/pen/1.jpg';
-
-import pillowPreview from './img/product/pillow/1.jpg'; // Replace with the actual path to the preview image
+import pillowPreview from './img/product/pillow/1.jpg';
 import pillow1 from './img/product/pillow/1.jpg';
 import pillow2 from './img/product/pillow/2.jpg';
 import pillow3 from './img/product/pillow/3.jpg';
 import pillow4 from './img/product/pillow/4.jpg';
-import bottlePreview from './img/product/Bottle/01.jpg'; // Replace with the actual path to the preview image
+import bottlePreview from './img/product/Bottle/01.jpg';
 import bottle1 from './img/product/Bottle/1.jpg';
 import bottle2 from './img/product/Bottle/2.jpg';
 import bottle3 from './img/product/Bottle/3.jpg';
@@ -103,13 +93,11 @@ import bottle4 from './img/product/Bottle/4.jpg';
 import bottle5 from './img/product/Bottle/5.jpg';
 import bottle6 from './img/product/Bottle/6.jpg';
 import bottle7 from './img/product/Bottle/7.jpg';
-
-import keychainPreview from './img/product/Keychain/4.jpg'; // Replace with the actual path to the preview image
+import keychainPreview from './img/product/Keychain/4.jpg';
 import keychain1 from './img/product/Keychain/1.jpg';
 import keychain2 from './img/product/Keychain/2.jpg';
 import keychain3 from './img/product/Keychain/3.jpg';
 import keychain4 from './img/product/Keychain/4.jpg';
-
 import photocopyPreview from './img/product/photocopy/1.jfif'; // Replace with the actual path to the preview image
 import photocopy1 from './img/product/photocopy/1.jfif';
 import photocopy2 from './img/product/photocopy/2.jfif';
@@ -159,29 +147,127 @@ import offer34 from "./img/OFFERNEW/34.jpeg";
 import offer35 from "./img/OFFERNEW/35.jpeg";
 import offer36 from "./img/OFFERNEW/36.jpeg";
 import offer37 from "./img/OFFERNEW/37.jpeg";
+import banner from "./img/Banner1.jpg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// ...existing code...
 
-function ProductDisplay({ product }) {
-
+// 3D Parallax Banner1 image component
+function ParallaxBanner() {
+  const imgRef = useRef(null);
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img) return;
+    const handleMove = (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = ((e.touches ? e.touches[0].clientX : e.clientX) - rect.left) / rect.width;
+      const y = ((e.touches ? e.touches[0].clientY : e.clientY) - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 30;
+      const rotateX = (0.5 - y) * 30;
+      img.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.08)`;
+    };
+    const reset = () => { img.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)'; };
+    img.addEventListener('mousemove', handleMove);
+    img.addEventListener('mouseleave', reset);
+    img.addEventListener('touchmove', handleMove);
+    img.addEventListener('touchend', reset);
+    return () => {
+      img.removeEventListener('mousemove', handleMove);
+      img.removeEventListener('mouseleave', reset);
+      img.removeEventListener('touchmove', handleMove);
+      img.removeEventListener('touchend', reset);
+    };
+  }, []);
   return (
-    <div className="product text-center col-lg-4 col-md-6 col-6" key={product.id}>
-      <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
-        <img src={product.preview} alt={product.name} className="img-fluid mb-3" />
-        <h5 className="p-name">{product.name}</h5>
-        <button className="buy-btn">
-          Read More
-        </button>
-      </Link>
+    <img
+      ref={imgRef}
+      src={banner}
+      alt="3D Banner"
+      className="parallax-3d-img"
+      style={{ width: '100%', maxWidth: 600, borderRadius: 16, boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}
+    />
+  );
+}
+
+
+
+
+// 3D Flipping Card
+function ProductDisplay({ product }) {
+  return (
+    <div className="product-3d-col text-center col-lg-4 col-md-6 col-12" key={product.id}>
+      <div className="product-3d-flip">
+        <div className="product-3d-flip-inner">
+          <div className="product-3d-flip-front">
+            <img src={product.preview} alt={product.name} className="img-fluid mb-3" />
+            <h5 className="p-name">{product.name}</h5>
+          </div>
+          <div className="product-3d-flip-back">
+            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+              <button className="buy-btn">Read More</button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 const Home = () => {
+  const featureSectionRef = useRef(null);
+
   useEffect(() => {
-        // Scroll to top when the page loads
-        window.scrollTo(0, 0);
-      }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add 'is-visible' to the container, which triggers animations on children
+            entry.target.classList.add('is-visible');
+            // No need to observe anymore
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      }
+    );
+
+    const currentRef = featureSectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Scroll to top when the page loads
+    window.scrollTo(0, 0);
+  }, []);
+  // Scroll-Reveal Effect: fade/slide content as user scrolls
+  useEffect(() => {
+    const handleScroll = () => {
+      const content = document.getElementById('scrollRevealContent');
+      if (!content) return;
+      const section = content.parentElement;
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      // How much of the section is visible (0 = top of viewport, 1 = bottom)
+      const visible = Math.min(Math.max((windowHeight - rect.top) / (rect.height || 1), 0), 1);
+      // Fade out and slide up as user scrolls down
+      content.style.opacity = 1 - visible * 1.2;
+      content.style.transform = `translateY(${-visible * 60}px)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const offerImages = [
     offer11, offer12, offer13, offer14, offer15, offer16, offer17,
     offer18, offer19, offer20, offer21, offer22, offer23, offer24,
@@ -448,29 +534,47 @@ const Home = () => {
       },
     ];
 
+  // 3D Parallax Hero
+  const heroRef = useRef(null);
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const handleMove = (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.touches ? e.touches[0].clientX : e.clientX) - rect.left) / rect.width;
+      const y = ((e.touches ? e.touches[0].clientY : e.clientY) - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 30;
+      const rotateX = (0.5 - y) * 30;
+      hero.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    };
+    const reset = () => { hero.style.transform = 'rotateY(0deg) rotateX(0deg)'; };
+    hero.addEventListener('mousemove', handleMove);
+    hero.addEventListener('mouseleave', reset);
+    hero.addEventListener('touchmove', handleMove);
+    hero.addEventListener('touchend', reset);
+    return () => {
+      hero.removeEventListener('mousemove', handleMove);
+      hero.removeEventListener('mouseleave', reset);
+      hero.removeEventListener('touchmove', handleMove);
+      hero.removeEventListener('touchend', reset);
+    };
+  }, []);
+
   return (
     <>
-
-      <div className="home-background">
+      <div className="hero-3d-container"></div>
+      {/* <div className="home-background"> */}
         <div className="scrolling-line">
           <span>
             We take orders on WhatsApp | Bulk orders available | Call us at{' '}
             <a href="tel:+917738405495">+91-7738405495</a>
           </span>
-        </div>
+        {/* </div> */}
+      </div>
 
-        {/* Moving printing paper effect */}
-        {/* <div className="printing-paper">Deep</div> */}
-
-        {/* <div className="home-container">
-          <div className="image-wrapper">
-            <img src={AvaniXerox1} alt="Welcome to Our Shop" className="responsive-image" />
-          </div>
-        </div> */}
-
-        {/* sections */}
+      <div>
         <div className='product_type home-container container-fluid'>
-          <div className='container pt-3' >
+          <div className='container pt-3 product-type-flex'>
             <div className='box'>
               <div className='img_box'>
                 <img src={section1} alt='Printing' />
@@ -498,46 +602,72 @@ const Home = () => {
           </div>
         </div>
       </div>
+     
+      
+      {/* Responsive Parallax Scrolling Section */}
+      <section className="parallax-section">
+        {/* Parallax background image is set via CSS */}
+        {/* <div className="parallax-content">
+          <h2>Discover Our Services</h2>
+          <p>We offer a wide range of printing, gifting, and stationery solutions for every need. Scroll down to explore more!</p>
+        </div> */}
+      </section>
+
+
+
+
+      {/* Moving printing paper effect */}
+      {/* <div className="printing-paper">Deep</div> */}
+
+      {/* <div className="home-container">
+          <div className="image-wrapper">
+            <img src={AvaniXerox1} alt="Welcome to Our Shop" className="responsive-image" />
+          </div>
+        </div> */}
+
+      {/* sections */}
+      
+
       {/* Banner 1 */}
       {/* <div className="home-container"> */}
 
-        {/* <div className="image-wrapper">
+      {/* <div className="image-wrapper">
             <img src={banner1} alt="Welcome to Our Shop" className="responsive-image" />
           </div> */}
       {/* </div> */}
 
-      <div className="container-fluid ">
-          <div className="row px-xl-3">
-            {/** Feature Item */}
-            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
-              </div>
+      <div className="container-fluid features-section" ref={featureSectionRef}>
+        <div className="row px-xl-3">
+          {/** Feature Item */}
+          <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+            <div className="feature-item d-flex align-items-center mb-4 swipe-in-from-left">
+              <h1 className="fa fa-print text-primary m-0 mr-3"></h1>
+              <h5 className="font-weight-semi-bold m-0">High-Quality Printing</h5>
             </div>
+          </div>
 
-            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
-              </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+            <div className="feature-item d-flex align-items-center mb-4 swipe-in-from-right">
+              <h1 className="fa fa-money-bill-wave text-primary m-0 mr-3"></h1>
+              <h5 className="font-weight-semi-bold m-0">Affordable Prices</h5>
             </div>
+          </div>
 
-            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
-              </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+            <div className="feature-item d-flex align-items-center mb-4 swipe-in-from-left">
+              <h1 className="fas fa-layer-group text-primary m-0 mr-3"></h1>
+              <h5 className="font-weight-semi-bold m-0">Wide Range of Products</h5>
             </div>
+          </div>
 
-            <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
-              <div className="feature-item d-flex align-items-center mb-4">
-                <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
-                <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
-              </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 pb-1">
+            <div className="feature-item d-flex align-items-center mb-4 swipe-in-from-right">
+              <h1 className="fa fa-clock text-primary m-0 mr-3"></h1>
+              <h5 className="font-weight-semi-bold m-0">Quick Service</h5>
             </div>
           </div>
         </div>
+      </div>
 
 
 
@@ -680,7 +810,9 @@ const Home = () => {
         </div>
       </div>
     </>
-  )
+
+  );
 }
+
 
 export default Home
