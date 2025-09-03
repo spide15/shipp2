@@ -1,89 +1,13 @@
-/* Logo center animation for manual switch */
-.logo-animate-center {
-  position: fixed !important;
-  left: 50% !important;
-  top: 50% !important;
-  transform: translate(-50%, -50%) scale(3.5) !important;
-  z-index: 9999 !important;
-  animation: logo-center-switch 1s cubic-bezier(0.4, 0.2, 0.2, 1);
-  border-radius: 50% !important;
-}
-
-@keyframes logo-center-switch {
-  0% {
-    left: auto;
-    top: auto;
-    transform: scale(1) rotate(0deg);
-    border-radius: 10%;
-  }
-  30% {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(3.5) rotate(20deg);
-    border-radius: 50%;
-  }
-  60% {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(3.5) rotate(-20deg);
-    border-radius: 50%;
-  }
-  100% {
-    left: auto;
-    top: auto;
-    transform: scale(1) rotate(0deg);
-    border-radius: 10%;
-  }
-}
 /* Logo */
-
 .logo-img {
   height: auto;
   max-height: 60px;
   max-width: 150px; /* Consistent sizing */
   object-fit: contain;
-  transition:
-    left 0.5s, top 0.5s, transform 0.5s,
-    box-shadow 0.5s, border-radius 0.5s;
+  transition: transform 0.3s ease-in-out;
   display: inline-block;
   margin: 0; /* Removes unnecessary margin */
 }
-
-.logo-img:hover {
-  transform: scale(1.2); /* Hover zoom effect */
-}
-
-/* Animated logo switch: moves to center, switches, and returns */
-/* Enlarge and rotate logo in navbar position */
-.logo-animate-inplace {
-  animation: logo-pop-rotate 1s cubic-bezier(0.4, 0.2, 0.2, 1);
-  z-index: 1001;
-  border-radius: 50%;
-}
-
-@keyframes logo-pop-rotate {
-  0% {
-    transform: scale(1) rotate(0deg);
-    box-shadow: none;
-    border-radius: 10%;
-  }
-  30% {
-    transform: scale(2.5) rotate(20deg);
-    box-shadow: none;
-    border-radius: 50%;
-  }
-  60% {
-    transform: scale(2.5) rotate(-20deg);
-    box-shadow: none;
-    border-radius: 50%;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    box-shadow: none;
-    border-radius: 10%;
-  }
-}
-
 
 .logo-img:hover {
   transform: scale(1.2); /* Hover zoom effect */

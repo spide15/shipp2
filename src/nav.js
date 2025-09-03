@@ -2,29 +2,12 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './nav.css';
 import logo1 from './img/logo/logo2icon.png';
-import logo2 from './img/logo/Red_logp.png'; // Add your second logo here
 import qrCode from './img/logo/qr-code.png'; // Add your QR code image here
 
 const Nav = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isQRModalOpen, setQRModalOpen] = useState(false);
-  const [isLogoOne, setIsLogoOne] = useState(true); // Track which logo is shown
-  const [isAnimating, setIsAnimating] = useState(false); // Animation state
-  const [isCenterAnim, setIsCenterAnim] = useState(false); // Center animation state
-
-  // Enlarge and rotate logo in navbar every 5 seconds (no logo switch)
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isAnimating) {
-        setIsAnimating(true);
-        setTimeout(() => {
-          setIsAnimating(false);
-        }, 1000);
-      }
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isAnimating]);
 
   // Ensure that toggleQRModal is defined within the functional component
   const toggleQRModal = () => {
@@ -39,30 +22,12 @@ const Nav = () => {
     setIsMenuOpen(false);
   };
 
-  // Toggle logo on click
-  const handleLogoClick = () => {
-    if (isAnimating || isCenterAnim) return; // Prevent multiple triggers
-    setIsCenterAnim(true);
-    setTimeout(() => {
-      setIsLogoOne((prev) => !prev);
-    }, 500); // Switch logo halfway through animation
-    setTimeout(() => {
-      setIsCenterAnim(false);
-    }, 1000); // End animation
-  };
-
   return (
     <>
       <div className="container-navbar">
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
-            <img
-              className={`logo-img${isAnimating ? ' logo-animate-inplace' : ''}${isCenterAnim ? ' logo-animate-center' : ''}`}
-              src={isLogoOne ? logo1 : logo2}
-              alt="AvaniXerox"
-              style={{ cursor: 'pointer' }}
-              onClick={handleLogoClick}
-            />
+            <img className="logo-img" src={logo1} alt="AvaniXerox" />
             <button
               className={`navbar-toggler ${isMenuOpen ? 'collapsed' : ''}`}
               type="button"
